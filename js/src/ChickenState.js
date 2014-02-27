@@ -17,6 +17,8 @@ ChickenState.prototype =  {
     },
 
     create: function()  {
+        this.game.stage.backgroundColor = '#ffffff';
+
         var sky = this.game.add.sprite(0, 0, 'sky');
         var ground = this.game.add.sprite(0, 250, 'ground');
         var henHouse = this.game.add.sprite(100, 300, 'henHouse');
