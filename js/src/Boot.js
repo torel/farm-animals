@@ -46,7 +46,7 @@ Boot.prototype = {
             var ratio = this.getRatio('fill', 800, 600);
             this.game.world.scale.x = ratio.x;
             this.game.world.scale.y = ratio.y;
-            this.game.world.updateTransform();
+            this.game.world._container.updateTransform();
         }
         else {
             if (this.game.device.desktop) {
