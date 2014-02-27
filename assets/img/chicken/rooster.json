@@ -1,0 +1,49 @@
+{
+    "frames": {
+
+        "0": {
+            "frame": {"x":0,"y":0,"w":250,"h":250},
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
+            "sourceSize": {"w":1250,"h":250}
+        },
+        "1": {
+            "frame": {"x":250,"y":0,"w":250,"h":250},
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
+            "sourceSize": {"w":1250,"h":250}
+        },
+        "2": {
+            "frame": {"x":500,"y":0,"w":250,"h":250},
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
+            "sourceSize": {"w":1250,"h":250}
+        },
+        "3": {
+            "frame": {"x":750,"y":0,"w":250,"h":250},
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
+            "sourceSize": {"w":1250,"h":250}
+        },
+        "4": {
+            "frame": {"x":1000,"y":0,"w":250,"h":250},
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
+            "sourceSize": {"w":1250,"h":250}
+        }
+    },
+    "meta": {
+        "app": "manual",
+        "version": "1.0",
+        "image": "rooster_sprite.png",
+        "format": "RGBA8888",
+        "size": {"w":1250,"h":250},
+        "scale": "1",
+        "smartupdate": ""
+    }
+}
