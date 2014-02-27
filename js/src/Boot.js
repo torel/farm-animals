@@ -10,6 +10,9 @@ Boot.prototype = {
         var width = window.innerWidth; // navigator.isCocoonJS ? window.innerWidth : w;
         var height = window.innerHeight; //navigator.isCocoonJS ? window.innerHeight : h;
 
+        console.log("width: " + width);
+        console.log("height: " + height);
+
         var dips = window.devicePixelRatio;
         width = width * dips;
         height = height * dips;
