@@ -7,12 +7,15 @@ Boot.prototype = {
 
     getRatio: function (type, w, h) {
 
-        var width = navigator.isCocoonJS ? window.innerWidth : w,
-            height = navigator.isCocoonJS ? window.innerHeight : h;
+        var width = window.innerWidth; // navigator.isCocoonJS ? window.innerWidth : w;
+        var height = window.innerHeight; //navigator.isCocoonJS ? window.innerHeight : h;
 
         var dips = window.devicePixelRatio;
         width = width * dips;
         height = height * dips;
+
+        console.log("width: " + width);
+        console.log("height: " + height);
 
         var scaleX = width / w,
             scaleY = height / h,
@@ -41,6 +44,13 @@ Boot.prototype = {
 
     setupScaling: function () {
 
+        var ratio = this.getRatio('all', 800, 600);
+        console.log("X: " + ratio.x + "Y: " + ratio.y);
+
+        this.game.world._container.scale.x = ratio.x;
+        this.game.world._container.scale.y = ratio.y;
+        this.game.world._container.updateTransform();
+        /*
         if (navigator.isCocoonJS) {
 
             var ratio = this.getRatio('fill', 800, 600);
@@ -71,6 +81,7 @@ Boot.prototype = {
         }
 
         this.game.world.setBounds(0, 0, 800, 600);
+        */
     },
 
 
