@@ -13,9 +13,9 @@ Boot.prototype = {
         console.log("width: " + width);
         console.log("height: " + height);
 
-        var dips = window.devicePixelRatio;
-        width = width * dips;
-        height = height * dips;
+        //var dips = window.devicePixelRatio;
+        //width = width * dips;
+        //height = height * dips;
 
         console.log("width: " + width);
         console.log("height: " + height);
