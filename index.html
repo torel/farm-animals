@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <title>hello phaser!</title>
         <script src="js/lib/phaser.js"></script>
+        <script src="js/src/Boot.js"></script>
+        <script src="js/src/PreLoader.js"></script>
+        <script src="js/src/ChickenState.js"></script>
     </head>
     <body>
 
@@ -11,52 +14,20 @@
 
     window.onload = function() {
 
-        var game = new Phaser.Game(800, 600, Phaser.AUTO, '', null, true);
+        var width = navigator.isCocoonJS ? window.innerWidth : 800;
+        var height = navigator.isCocoonJS ? window.innerHeight : 600;
+        var dips = window.devicePixelRatio;
 
-        var ChickenState =  {
+        width = width * dips;
+        height = height * dips;
 
-            rooster: null,
+        var game = new Phaser.Game(width, height, Phaser.AUTO, '');
 
-            preload: function() {
-                game.load.image('sky', 'assets/img/chicken/sky.png');
-                game.load.image('ground', 'assets/img/chicken/ground.png');
-                game.load.image('henHouse', 'assets/img/chicken/hen_house.png');
-                game.load.atlasJSONHash('rooster', 'assets/img/chicken/rooster_sprite.png', 'assets/img/chicken/rooster.json');
+        game.transparent = true;
 
-                game.load.audio('scream', ['assets/sound/rooster.mp3', 'assets/sound/rooster.wav']);
-            },
-
-            create: function()  {
-                var sky = game.add.sprite(0, 0, 'sky');
-                var ground = game.add.sprite(0, 250, 'ground');
-                var henHouse = game.add.sprite(100, 300, 'henHouse');
-
-                this.rooster = game.add.sprite(130, 150, 'rooster');
-
-                this.rooster.animations.add('scream', [0,0,1,2,1,2,1,0,1,2,2,2,2,2,2,2,2,2,2,1,0], 7, false, true);
-                this.rooster.animations.add('stand', [0], 10, false, true);
-                this.rooster.animations.add('sway', [3, 0, 4, 0], 1, true, true);
-
-                this.rooster.animations.play('stand', 1, true);
-
-                //enables all kind of input actions on this image (click, etc)
-                this.rooster.inputEnabled=true;
-
-                this.rooster.events.onInputDown.add(this.playRooster,this);
-            },
-
-            playRooster: function() {
-                this.rooster.animations.play('scream');
-
-                var scream = game.add.audio('scream', 1, false);
-
-                scream.play('', 0);
-
-            }
-        };
-
-        game.state.add('chickenState', ChickenState, true);
-
+        game.state.add('Boot', Boot, true);
+        game.state.add('PreLoader', PreLoader);
+        game.state.add('ChickenState', ChickenState);
     };
 
     </script>
