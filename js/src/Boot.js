@@ -44,9 +44,15 @@ Boot.prototype = {
         if (navigator.isCocoonJS) {
 
             var ratio = this.getRatio('fill', 800, 600);
-            this.game.world.scale.x = ratio.x;
-            this.game.world.scale.y = ratio.y;
+            console.log(ratio);
+
+            this.game.world._container.scale.x = ratio.x;
+            this.game.world._container.scale.y = ratio.y;
             this.game.world._container.updateTransform();
+
+            //this.game.world.scale.x = ratio.x;
+            //this.game.world.scale.y = ratio.y;
+            //this.game.world.updateTransform();
         }
         else {
             if (this.game.device.desktop) {
