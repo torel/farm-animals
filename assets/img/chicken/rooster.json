@@ -2,39 +2,39 @@
     "frames": {
 
         "0": {
-            "frame": {"x":0,"y":0,"w":250,"h":250},
+            "frame": {"x":0,"y":0,"w":170,"h":175},
             "rotated": false,
             "trimmed": true,
-            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
-            "sourceSize": {"w":1250,"h":250}
+            "spriteSourceSize": {"x":0,"y":0,"w":875,"h":175},
+            "sourceSize": {"w":875,"h":175}
         },
         "1": {
-            "frame": {"x":250,"y":0,"w":250,"h":250},
+            "frame": {"x":175,"y":0,"w":170,"h":175},
             "rotated": false,
             "trimmed": true,
-            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
-            "sourceSize": {"w":1250,"h":250}
+            "spriteSourceSize": {"x":0,"y":0,"w":875,"h":175},
+            "sourceSize": {"w":875,"h":175}
         },
         "2": {
-            "frame": {"x":500,"y":0,"w":250,"h":250},
+            "frame": {"x":350,"y":0,"w":170,"h":175},
             "rotated": false,
             "trimmed": true,
-            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
-            "sourceSize": {"w":1250,"h":250}
+            "spriteSourceSize": {"x":0,"y":0,"w":875,"h":175},
+            "sourceSize": {"w":875,"h":175}
         },
         "3": {
-            "frame": {"x":750,"y":0,"w":250,"h":250},
+            "frame": {"x":525,"y":0,"w":170,"h":175},
             "rotated": false,
             "trimmed": true,
-            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
-            "sourceSize": {"w":1250,"h":250}
+            "spriteSourceSize": {"x":0,"y":0,"w":875,"h":175},
+            "sourceSize": {"w":875,"h":175}
         },
         "4": {
-            "frame": {"x":1000,"y":0,"w":250,"h":250},
+            "frame": {"x":700,"y":0,"w":170,"h":175},
             "rotated": false,
             "trimmed": true,
-            "spriteSourceSize": {"x":0,"y":0,"w":1250,"h":250},
-            "sourceSize": {"w":1250,"h":250}
+            "spriteSourceSize": {"x":0,"y":0,"w":875,"h":175},
+            "sourceSize": {"w":875,"h":175}
         }
     },
     "meta": {
@@ -42,7 +42,7 @@
         "version": "1.0",
         "image": "rooster_sprite.png",
         "format": "RGBA8888",
-        "size": {"w":1250,"h":250},
+        "size": {"w":875,"h":175},
         "scale": "1",
         "smartupdate": ""
     }
