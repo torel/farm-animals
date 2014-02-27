@@ -14,13 +14,14 @@
 
     window.onload = function() {
 
-        var width = navigator.isCocoonJS ? window.innerWidth : 800;
-        var height = navigator.isCocoonJS ? window.innerHeight : 600;
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        /*
         var dips = window.devicePixelRatio;
 
         width = width * dips;
         height = height * dips;
-
+        */
         var game = new Phaser.Game(width, height, Phaser.AUTO, '');
 
         game.transparent = true;

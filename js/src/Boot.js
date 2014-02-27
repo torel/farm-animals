@@ -5,24 +5,29 @@ Boot = function (game) {
 
 Boot.prototype = {
 
-    getRatio: function (type, w, h) {
+    defaultWidth: 800,
+    defaultHeight: 600,
 
-        var width = window.innerWidth; // navigator.isCocoonJS ? window.innerWidth : w;
-        var height = window.innerHeight; //navigator.isCocoonJS ? window.innerHeight : h;
+
+    getRatio: function (type) {
+
+        var width = window.innerWidth;
+        var height = window.innerHeight;
 
         console.log("width: " + width);
         console.log("height: " + height);
 
-        //var dips = window.devicePixelRatio;
+        var dips = window.devicePixelRatio;
         //width = width * dips;
         //height = height * dips;
 
         console.log("width: " + width);
         console.log("height: " + height);
+        console.log("dips: " + dips);
 
-        var scaleX = width / w,
-            scaleY = height / h,
-            result = {
+        var scaleX = width / this.defaultWidth;
+        var scaleY = height / this.defaultHeight;
+        var result = {
                 x: 1,
                 y: 1
             };
@@ -47,7 +52,7 @@ Boot.prototype = {
 
     setupScaling: function () {
 
-        var ratio = this.getRatio('all', 800, 600);
+        var ratio = this.getRatio('all');
         console.log("X: " + ratio.x + "Y: " + ratio.y);
 
         this.game.world._container.scale.x = ratio.x;
@@ -82,9 +87,9 @@ Boot.prototype = {
                 this.game.stage.scale.setScreenSize(true);
             }
         }
+         */
+        // this.game.world.setBounds(0, 0, 800, 600);
 
-        this.game.world.setBounds(0, 0, 800, 600);
-        */
     },
 
 
