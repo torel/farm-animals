@@ -19,6 +19,7 @@ PreLoader.prototype = {
         this.game.load.audio('scream', ['assets/sound/rooster.mp3', 'assets/sound/rooster.wav'], true);
         this.game.load.audio('cluck', ['assets/sound/clucking.mp3', 'assets/sound/clucking.wav'], true);
         this.game.load.audio('egg', ['assets/sound/lay_egg.mp3', 'assets/sound/lay_egg.wav'], true);
+        this.game.load.audio('smile', ['assets/sound/smile.mp3', 'assets/sound/smile.wav'], true);
     },
 
     create: function() {

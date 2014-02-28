@@ -48,4 +48,6 @@ Sun.prototype.displaySmile = function() {
         this.smile = new Smile(this.game, this.sx - 5, this.sy - 5);
         this.game.add.existing(this.smile);
     }
+    var smileSound = this.game.add.audio('smile', 1, false);
+    smileSound.play('', 0);
 };
