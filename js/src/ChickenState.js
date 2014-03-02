@@ -20,12 +20,10 @@ ChickenState.prototype =  {
 
         this.rooster = new Rooster(this.game, 130, 150);
 
+        this.chicken = new Chicken(this.game, 200, 460, 0.7);
+        this.chicken2 = new Chicken(this.game, 650, 470, 0.75);
         this.hen = new Hen(this.game, 380, 260);
-    },
 
-    playRooster: function() {
-        this.rooster.animations.play('scream');
-        var scream = this.game.add.audio('scream', 1, false);
-        scream.play('', 0);
+        this.chicken3 = new Chicken(this.game, 400, 530, 0.85);
     }
 };
