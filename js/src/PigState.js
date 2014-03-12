@@ -36,7 +36,8 @@ PigState.prototype =  {
         // this.backgroundSound = this.game.add.audio('chicks', 0.2, true);
         // this.backgroundSound.play();
 
-        this.game.add.button(20, 300, 'button', this.switchState, this);
+        var button = this.game.add.button(80, 300, 'button', this.switchState, this);
+        button.scale.x = -1
         this.backgroundSound = this.game.add.audio('pigs', 0.2, true);
         this.backgroundSound.play();
 
