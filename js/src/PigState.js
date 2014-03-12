@@ -10,15 +10,26 @@ PigState.prototype =  {
     },
 
     create: function()  {
-        this.game.add.sprite(-100, -100, 'sky');
-        new Sun(this.game, 650, 100);
+        var sky= this.game.add.sprite(-100, -100, 'sky');
+        new Sun(this.game, 450, 100);
 
-        this.game.add.sprite(0, 50, 'pigGround');
-        this.game.add.sprite(10, 220, 'water');
-        this.game.add.sprite(0, 330, 'fence');
-        this.game.add.sprite(0, 380, 'fence');
-        this.game.add.sprite(0, 450, 'mud');
-        this.game.add.sprite(555, 200, 'barn');
+        var ground = this.game.add.sprite(-100, 50, 'pigGround');
+        ground.scale.x = 1000/ground.width;
+        ground.scale.y = 600/ground.height;
+        
+        var water = this.game.add.sprite(10, 220, 'water');
+        
+        var fenceBack = this.game.add.sprite(-296, 330, 'fence');
+        var fenceFront = this.game.add.sprite(-296, 380, 'fence');
+        
+        var mud = this.game.add.sprite(0, 485, 'mud');
+        mud.scale.x = mud.scale.y = 0.9
+        var barn = this.game.add.sprite(453, 230, 'barn');
+        barn.scale.x = barn.scale.y = 0.7
+        console.log (ground, 'før',sky.width)
+
+        console.log (ground, 'etter',barn.width)
+
 
         // this.backgroundSound = this.game.add.audio('chicks', 0.2, true);
         // this.backgroundSound.play();
