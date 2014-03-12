@@ -1,4 +1,3 @@
-
 ChickenState = function(game) {
     this.game = game;
 };
@@ -35,5 +34,6 @@ ChickenState.prototype =  {
 
     switchState: function() {
         this.game.state.start('PigState');
+        this.backgroundSound.stop();
     }
 };

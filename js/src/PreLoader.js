@@ -22,7 +22,7 @@ PreLoader.prototype = {
         this.game.load.image('barn', 'assets/img/pig/barn.png');
         this.game.load.image('water', 'assets/img/generic/water.png');
         this.game.load.image('mud', 'assets/img/generic/mud.png');
-        this.game.load.image('mud', 'assets/img/generic/mud.png');
+        this.game.load.image('fence', 'assets/img/generic/fence.png');
 
 
         // Audio
@@ -32,6 +32,8 @@ PreLoader.prototype = {
         this.game.load.audio('smile', ['assets/sound/smile.mp3', 'assets/sound/smile.wav'], true);
         this.game.load.audio('highPitchedPeep', ['assets/sound/highpitched_peep.mp3', 'assets/sound/highpitched_peep.wav'], true);
         this.game.load.audio('chicks', ['assets/sound/chicks_peeping.mp3', 'assets/sound/chicks_peeping.wav'], true);
+        this.game.load.audio('pigs', ['assets/sound/pigsnort.mp3', 'assets/sound/pigsnort.wav'], true);
+
     },
 
     create: function() {
