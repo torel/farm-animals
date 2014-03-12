@@ -30,6 +30,8 @@ PigState.prototype =  {
 
         console.log (ground, 'etter',barn.width)
 
+        new Pig(this.game, 80, 400)
+        new Tractor(this.game, 80, 200)
 
         // this.backgroundSound = this.game.add.audio('chicks', 0.2, true);
         // this.backgroundSound.play();
