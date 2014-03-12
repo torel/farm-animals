@@ -11,10 +11,19 @@ PreLoader.prototype = {
         this.game.load.image('ground', 'assets/img/chicken/ground.png');
         this.game.load.image('henHouse', 'assets/img/chicken/hen_house.png');
         this.game.load.image('smile', 'assets/img/generic/smile.png');
+        this.game.load.image('button', 'assets/img/generic/button.png');
         this.game.load.atlasJSONHash('rooster', 'assets/img/chicken/rooster_sprite.png', 'assets/img/chicken/rooster.json');
         this.game.load.spritesheet('sun', 'assets/img/generic/sun_sprite.png', 100, 100, 25);
         this.game.load.spritesheet('hen', 'assets/img/chicken/hen_sprite.png', 250, 300, 9);
         this.game.load.spritesheet('chicken', 'assets/img/chicken/chicken_sprite.png', 100, 163, 14);
+
+
+        this.game.load.image('pigGround', 'assets/img/pig/pig_background.png');
+        this.game.load.image('barn', 'assets/img/pig/barn.png');
+        this.game.load.image('water', 'assets/img/generic/water.png');
+        this.game.load.image('mud', 'assets/img/generic/mud.png');
+        this.game.load.image('mud', 'assets/img/generic/mud.png');
+
 
         // Audio
         this.game.load.audio('scream', ['assets/sound/rooster.mp3', 'assets/sound/rooster.wav'], true);
