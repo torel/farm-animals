@@ -23,8 +23,8 @@ PreLoader.prototype = {
         this.game.load.image('water', 'assets/img/generic/water.png');
         this.game.load.image('mud', 'assets/img/generic/mud.png');
         this.game.load.image('fence', 'assets/img/generic/fence.png');
-        // this.game.load.spritesheet('pig', 'assets/img/pig/pig_sprite.png', 480, 270, 27);
-        // this.game.load.spritesheet('tractor', 'assets/img/pig/tractor.png', 517.17, 419, 6);
+        this.game.load.spritesheet('pig', 'assets/img/pig/pig_sprite.png', 480, 270, 27, 0, 0);
+        this.game.load.spritesheet('tractor', 'assets/img/pig/tractor.png', 518, 420, 6, 0, 0);
 
 
         // Audio

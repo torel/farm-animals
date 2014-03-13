@@ -20,6 +20,8 @@ PigState.prototype =  {
         var water = this.game.add.sprite(10, 220, 'water');
         
         var fenceBack = this.game.add.sprite(-296, 330, 'fence');
+        new Tractor(this.game, 80, 250, 0.4)
+
         var fenceFront = this.game.add.sprite(-296, 380, 'fence');
         
         var mud = this.game.add.sprite(0, 485, 'mud');
@@ -31,7 +33,8 @@ PigState.prototype =  {
         console.log (ground, 'etter',barn.width)
 
         new Pig(this.game, 80, 400)
-        new Tractor(this.game, 80, 200)
+       
+
 
         // this.backgroundSound = this.game.add.audio('chicks', 0.2, true);
         // this.backgroundSound.play();
