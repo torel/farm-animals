@@ -19,7 +19,7 @@ PigState.prototype =  {
         barn.scale.x = barn.scale.y = 0.25;
 
         new Tractor(this.game, 680, 200, 0.3);
-        var fenceFront = this.game.add.sprite(-296, 330, 'fence');
+        var fenceFront = this.game.add.sprite(-296, 310, 'fence');
 
         // new Pig(this.game, 80, 400)
        
