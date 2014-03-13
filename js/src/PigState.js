@@ -19,9 +19,9 @@ PigState.prototype =  {
         barn.scale.x = barn.scale.y = 0.25;
 
         new Tractor(this.game, 680, 200, 0.3);
-        var fenceFront = this.game.add.sprite(-296, 300, 'fence');
+        this.game.add.sprite(-296, 300, 'fence');
 
-        // new Pig(this.game, 80, 400)
+        new Pig(this.game, 80, 400, 0.7);
        
 
 
@@ -29,7 +29,7 @@ PigState.prototype =  {
         // this.backgroundSound.play();
 
         var button = this.game.add.button(80, 300, 'button', this.switchState, this);
-        button.scale.x = -1
+        button.scale.x = -1;
         this.backgroundSound = this.game.add.audio('pigs', 0.2, true);
         this.backgroundSound.play();
 

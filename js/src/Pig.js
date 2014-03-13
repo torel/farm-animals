@@ -14,7 +14,7 @@ Pig = function(game, x, y, scale) {
     this.rightBoundary = 950 * this.ratio;
 
     this.scale.x = this.scale.y = this.scaler;
-    
+
     this.anims = [
                     {name: 'stand',         sequence: [],  frameRate: 1,   loop: true},
                     {name: 'walk',          sequence: [],  frameRate: 1,   loop: true},

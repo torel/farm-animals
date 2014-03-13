@@ -13,7 +13,7 @@ Sun = function(game, x, y, scale) {
     // Set rotation point
     this.anchor.setTo(0.5, 0.5);
 
-    // Double size
+    // Scale size
     this.scale.setTo(this.scaler, this.scaler);
 
     // Add and start animation
