@@ -18,6 +18,9 @@ Tractor = function(game, x, y, scale) {
     console.log(this.animations, 'thisanimation')
     // Add to game
     game.add.existing(this);
+
+        // Set rotation point
+   this.anchor.setTo(0.5, 0);
 };
 
 Tractor.prototype = Object.create(Phaser.Sprite.prototype);
@@ -29,16 +32,16 @@ Tractor.prototype.constructor = Tractor;
 Tractor.prototype.update = function() {
 
     if (this.left && !this.still) {
-        this.body.velocity.x -= 1;
+        this.body.velocity.x = -100;
 
     } else if (!this.left && !this.still) {
         this.body.velocity.x = 100;
     }
 
-    if (this.body.x < 10 && this.left) {
+    if (this.body.x < 0 && this.left) {
         this.left = false;
         this.scale.x = (-1 * this.scale.x);
-    } else if (this.body.x > 200 && !this.left) {
+    } else if (this.body.x > 400 && !this.left) {
         this.left = true;
         this.scale.x = (-1 * this.scale.x);
     }
