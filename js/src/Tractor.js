@@ -30,7 +30,7 @@ Tractor = function(game, x, y, scale) {
     this.animations.play('drive');
     
     //add sounds
-    this.tractorSound = this.game.add.audio('tractor', 1, false);
+    this.tractorSound = this.game.add.audio('tractor', 1, true);
     this.tractorHorn    = this.game.add.audio('horn', 1, false);
 
 
