@@ -37,6 +37,8 @@ Tractor = function(game, x, y, scale) {
     // Enable input actions
     this.inputEnabled = true;
     this.events.onInputDown.add(this.smokeAnimation, this);
+    this.input.enableDrag(true);
+
 
     // Add to game
     game.add.existing(this);
