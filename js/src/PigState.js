@@ -20,7 +20,7 @@ PigState.prototype =  {
         var water = this.game.add.sprite(10, 220, 'water');
         
         var fenceBack = this.game.add.sprite(-296, 330, 'fence');
-        new Tractor(this.game, 80, 250, 0.4)
+        new Tractor(this.game, 1000, 250, 0.4)
 
         var fenceFront = this.game.add.sprite(-296, 380, 'fence');
         
