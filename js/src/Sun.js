@@ -1,15 +1,20 @@
 
-Sun = function(game, x, y) {
+Sun = function(game, x, y, scale) {
     this.game = game;
     this.sx = x;
     this.sy = y;
+    this.scaler = scale;
     Phaser.Sprite.call(this, game, x, y, 'sun');
+
+    if (! scale) {
+        this.scaler = 1;
+    }
 
     // Set rotation point
     this.anchor.setTo(0.5, 0.5);
 
     // Double size
-    this.scale.setTo(2.5, 2.5);
+    this.scale.setTo(this.scaler, this.scaler);
 
     // Add and start animation
     this.animations.add('sparkle', [0,0,0,0,0,0,0,0,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,24,24,24,24,24,24,24,24,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1], 7, true, true);
@@ -45,8 +50,10 @@ Sun.prototype.update = function() {
  */
 Sun.prototype.displaySmile = function() {
     if (! this.smile) {
-        this.smile = new Smile(this.game, this.sx - 5, this.sy - 5);
+        this.smile = new Smile(this.game, this.sx - 5/2.5, this.sy - 5/2.5);
         this.game.add.existing(this.smile);
+        var smileScale = this.scaler / 2.5;
+        this.smile.scale.setTo(smileScale, smileScale);
     }
     var smileSound = this.game.add.audio('smile', 1, false);
     smileSound.play('', 0);

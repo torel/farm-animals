@@ -12,7 +12,7 @@ ChickenState.prototype =  {
 
     create: function()  {
         this.game.add.sprite(-100, -100, 'sky');
-        new Sun(this.game, 650, 170);
+        new Sun(this.game, 650, 170, 2.5);
 
         this.game.add.sprite(-100, 250, 'ground');
         this.game.add.sprite(100, 300, 'henHouse');
