@@ -32,7 +32,7 @@ PigState.prototype =  {
 
         console.log (ground, 'etter',barn.width)
 
-        new Pig(this.game, 80, 400)
+        // new Pig(this.game, 80, 400)
        
 
 
