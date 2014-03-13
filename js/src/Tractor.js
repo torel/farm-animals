@@ -37,7 +37,9 @@ Tractor = function(game, x, y, scale) {
     // Enable input actions
     this.inputEnabled = true;
     this.events.onInputDown.add(this.smokeAnimation, this);
-    this.input.enableDrag(true);
+    
+    //Enable/disable drag
+    // this.input.enableDrag(true);
 
 
     // Add to game
@@ -64,7 +66,7 @@ Tractor.prototype.update = function() {
         this.animations.play('drive')
     }
 
-    if (this.body.x <= this.ratio * 400 && this.body.x >= 50 * this.ratio && !this.playingTractorSound) {
+    if (this.body.x <= this.ratio * 700 && this.body.x >= 300 * this.ratio && !this.playingTractorSound) {
         this.tractorSound.play();
         this.playingTractorSound = true;
     }
