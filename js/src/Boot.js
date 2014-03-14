@@ -53,11 +53,11 @@ Boot.prototype = {
     setupScaling: function () {
 
         var ratio = this.getRatio('all');
-        console.log("X: " + ratio.x + "Y: " + ratio.y);
+        console.log("X:", ratio.x, "Y: ", ratio.y);
 
-        this.game.world._container.scale.x = ratio.x;
-        this.game.world._container.scale.y = ratio.y;
-        this.game.world._container.updateTransform();
+        this.game.world.scale.x = ratio.x;
+        this.game.world.scale.y = ratio.y;
+        this.game.world.updateTransform();
         /*
         if (navigator.isCocoonJS) {
 

@@ -35,7 +35,7 @@ PreLoader.prototype = {
         this.game.load.audio('smile', ['assets/sound/smile.mp3', 'assets/sound/smile.wav'], true);
         this.game.load.audio('highPitchedPeep', ['assets/sound/highpitched_peep.mp3', 'assets/sound/highpitched_peep.wav'], true);
         this.game.load.audio('chicks', ['assets/sound/chicks_peeping.mp3', 'assets/sound/chicks_peeping.wav'], true);
-        this.game.load.audio('pigs', ['assets/sound/pigsnort.mp3', 'assets/sound/pigsnort.wav'], true);
+        this.game.load.audio('pigSnort', ['assets/sound/pigsnort.mp3', 'assets/sound/pigsnort.wav'], true);
         this.game.load.audio('tractor', ['assets/sound/tractor.mp3'], true);
 
     },

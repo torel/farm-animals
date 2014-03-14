@@ -3,6 +3,7 @@ Chicken = function(game, x, y, scale) {
     var that = this;
 
     Phaser.Sprite.call(this, game, x, y, 'chicken');
+    game.physics.enable(this, Phaser.Physics.ARCADE);
     this.highPitchedPeep = this.game.add.audio('highPitchedPeep', 1, false);
 
     // Set rotation point

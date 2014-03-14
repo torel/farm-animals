@@ -1,12 +1,12 @@
 
 Pig = function(game, x, y, scale) {
     Phaser.Sprite.call(this, game, x, y, 'pig');
-
+    game.physics.enable(this, Phaser.Physics.ARCADE);
 
     var that = this;
 
     this.scaler = scale;
-    this.ratio = this.game.world._container.scale.x;
+    this.ratio = this.game.world.scale.x;
     this.body.velocity.x = -100;
     this.left = true;
     this.framecount = 0;
@@ -20,14 +20,14 @@ Pig = function(game, x, y, scale) {
 
     this.anims = [
                     {name: 'stand',        speed: 0,   sequence: [0],                   frameRate: 1,   loop: false},
+                    {name: 'wriggleHead',  speed: 0,   sequence: [0,23,24,23,0,25,26,25,23,24,23,0,25,26,25,0],  frameRate: 10,  loop: false},
+                    {name: 'straightTail', speed: 0,   sequence: [0,19,20,21,22,22,22,21,20,19,0],  frameRate: 10,  loop: false}/*,
                     {name: 'walk',         speed: 30,  sequence: [0,5,6,5,0,7,8,7],     frameRate: 20,   loop: true},
                     {name: 'run',          speed: 100, sequence: [0,5,6,5,0,7,8,7,0],   frameRate: 60,  loop: true},
-                    {name: 'wriggleHead',  speed: 0,   sequence: [0,23,24,23,0,25,26,25,23,24,23,0,25,26,25,0],  frameRate: 10,  loop: false},
-                    {name: 'straightTail', speed: 0,   sequence: [0,19,20,21,22,22,22,21,20,19,0],  frameRate: 10,  loop: false},
                     {name: 'jump',         speed: 0,   sequence: [0,9,10,11,12,13,13,13,13,13,13,13,13,13,12,11,10,9,0],  frameRate: 20,  loop: false},
-                    {name: 'limp',         speed: 30,  sequence: [0,1,2,1,0,3,4,3],     frameRate: 20,  loop: true},
                     {name: 'sit',          speed: 0,   sequence: [0,14,15,16,17,18],    frameRate: 20,  loop: false},
-                    {name: 'raise',        speed: 0,   sequence: [18,17,16,15,14,0],    frameRate: 20,  loop: false}
+                    {name: 'limp',         speed: 30,  sequence: [0,1,2,1,0,3,4,3],     frameRate: 20,  loop: true},
+                    {name: 'raise',        speed: 0,   sequence: [18,17,16,15,14,0],    frameRate: 20,  loop: false}*/
 
     ];
 
@@ -35,12 +35,13 @@ Pig = function(game, x, y, scale) {
         that.animations.add(anim.name, anim.sequence, anim.frameRate, anim.loop, true);
     });
 
-    this.currentAnim = this.getAnimationByName('walk');
+    this.currentAnim = this.getAnimationByName('stand');
+    this.prevAnim = this.currentAnim;
     this.animations.play(this.currentAnim.name);
     this.body.velocity.x = this.currentAnim.speed;
 
     //add sounds
-    this.pigSnort = this.game.add.audio('pigs', 1, true);
+    this.pigSnort = this.game.add.audio('pigSnort', 1, false);
 
     // Enable input actions
     this.inputEnabled = true;
@@ -93,17 +94,21 @@ Pig.prototype.getAnimationByName = function(name) {
  */
 Pig.prototype.playAnimation = function() {
 
-    this.currentAnim = this.getRandomAnimation();
+    do {
+        this.currentAnim = this.getRandomAnimation();
+    } while (this.currentAnim === this.prevAnim)
 
     this.animations.play(this.currentAnim.name);
     this.body.velocity.x = this.currentAnim.speed;
     this.frameCount = 0;
+    this.prevAnim = this.currentAnim;
 
 };
 
 Pig.prototype.onClickPig = function() {
     this.playAnimation();
     this.playPigSound();
+    console.log('left:', this.body.position)
 };
 
 Pig.prototype.playPigSound = function() {
@@ -111,6 +116,15 @@ Pig.prototype.playPigSound = function() {
 };
 
 Pig.prototype.getRandomAnimation = function() {
+
     var randomNumber = Math.floor(Math.random()*this.anims.length);
     return this.anims[randomNumber];
+}
+
+Pig.prototype.checkIfHeadIsClicked = function () {
+    this.defindHeadBoundries();
+}
+
+Pig.prototype.defindHeadBoundries = function () {
+
 }

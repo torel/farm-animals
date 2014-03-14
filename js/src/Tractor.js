@@ -1,12 +1,13 @@
 
 Tractor = function(game, x, y, scale) {
     Phaser.Sprite.call(this, game, x, y, 'tractor');
+    game.physics.enable(this, Phaser.Physics.ARCADE);
     
     var that = this;
     
     //setting variables for Tractor
     this.scaler = scale;
-    this.ratio = this.game.world._container.scale.x;
+    this.ratio = this.game.world.scale.x;
     this.body.velocity.x = -100;
     this.left = true;
     this.framecount = 0;
@@ -30,7 +31,7 @@ Tractor = function(game, x, y, scale) {
     this.animations.play('drive');
     
     //add sounds
-    this.tractorSound = this.game.add.audio('tractor', 1, true);
+    this.tractorSound = this.game.add.audio('tractor', 1, false);
     this.tractorHorn = this.game.add.audio('horn', 1, false);
 
 
