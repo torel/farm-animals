@@ -5,8 +5,8 @@ Tractor = function(game, x, y, scale) {
     var that = this;
     
     //setting variables for Tractor
-    this.scaler = scale
-    this.ratio = this.game.world._container.scale.x
+    this.scaler = scale;
+    this.ratio = this.game.world._container.scale.x;
     this.body.velocity.x = -100;
     this.left = true;
     this.framecount = 0;
@@ -31,7 +31,7 @@ Tractor = function(game, x, y, scale) {
     
     //add sounds
     this.tractorSound = this.game.add.audio('tractor', 1, true);
-    this.tractorHorn    = this.game.add.audio('horn', 1, false);
+    this.tractorHorn = this.game.add.audio('horn', 1, false);
 
 
     // Enable input actions
@@ -56,7 +56,7 @@ Tractor.prototype.constructor = Tractor;
  * Called by World.update
  */
 Tractor.prototype.update = function() {
-    this.framecount++
+    this.framecount++;
 
     this.checkBoundary();
     this.findDirection();
@@ -79,6 +79,7 @@ Tractor.prototype.update = function() {
 Tractor.prototype.smokeAnimation = function() {
     this.framecount = 0;
     this.animations.play('smoke');
+    this.tractorHorn.play();
 };
 
 Tractor.prototype.findDirection = function () {

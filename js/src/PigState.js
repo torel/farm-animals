@@ -11,9 +11,9 @@ PigState.prototype =  {
 
     create: function()  {
         var sky= this.game.add.sprite(-100, -100, 'sky');
-        var sun = new Sun(this.game, 450, 100, 1.2);
+        new Sun(this.game, 450, 100, 1.2);
 
-        var ground = this.game.add.sprite(-100, 50, 'pigGround');
+        this.game.add.sprite(-100, 50, 'pigGround');
 
         var barn = this.game.add.sprite(660, 110, 'barn');
         barn.scale.x = barn.scale.y = 0.25;
@@ -21,7 +21,7 @@ PigState.prototype =  {
         new Tractor(this.game, 680, 200, 0.3);
         this.game.add.sprite(-296, 300, 'fence');
 
-        new Pig(this.game, 80, 400, 0.7);
+        new Pig(this.game, 580, 350, 0.5);
        
 
 
