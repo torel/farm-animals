@@ -44,7 +44,7 @@ Pig = function(game, x, y, scale) {
 
     // Enable input actions
     this.inputEnabled = true;
-    this.events.onInputDown.add(this.playAnimation, this);
+    this.events.onInputDown.add(this.onClickPig, this);
 
     // Add to game
     game.add.existing(this);
@@ -91,7 +91,7 @@ Pig.prototype.getAnimationByName = function(name) {
 /**
  * Play animation
  */
-Pig.prototype.playAnimation = function(anim) {
+Pig.prototype.playAnimation = function() {
 
     this.currentAnim = this.getRandomAnimation();
 

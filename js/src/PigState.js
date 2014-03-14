@@ -21,7 +21,7 @@ PigState.prototype =  {
         new Tractor(this.game, 680, 200, 0.3);
         this.game.add.sprite(-296, 300, 'fence');
 
-        new Pig(this.game, 580, 350, 0.5);
+        new Pig(this.game, 580, 430, 0.5);
        
 
 
