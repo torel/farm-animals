@@ -10,6 +10,8 @@ PigState.prototype =  {
     },
 
     create: function()  {
+        this.game.animals = {};
+
         var sky= this.game.add.sprite(-100, -100, 'sky');
         new Sun(this.game, 450, 100, 1.2);
 
@@ -18,10 +20,10 @@ PigState.prototype =  {
         var barn = this.game.add.sprite(660, 110, 'barn');
         barn.scale.x = barn.scale.y = 0.25;
 
-        new Tractor(this.game, 680, 200, 0.3);
+        this.game.animals['tractor'] = new Tractor(this.game, 680, 170, 0.4);
         this.game.add.sprite(-296, 300, 'fence');
 
-        new Pig(this.game, 580, 430, 0.5);
+        this.game.animals['pig'] = new Pig(this.game, 580, 430, 0.5);
        
 
 
@@ -36,10 +38,10 @@ PigState.prototype =  {
     },
 
     update: function () {
-         if (this.game.input.mousePointer.isDown) {
-            console.log('X:', this.game.input.x*this.game.world.scale.x);
-            console.log('Y:', this.game.input.y*this.game.world.scale.y);
-        }
+        //  if (this.game.input.mousePointer.isDown) {
+        //     console.log('X:', this.game.input.x*this.game.world.scale.x);
+        //     console.log('Y:', this.game.input.y*this.game.world.scale.y);
+        // }
     },
 
     switchState: function() {

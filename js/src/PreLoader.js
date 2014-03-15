@@ -37,6 +37,7 @@ PreLoader.prototype = {
         this.game.load.audio('chicks', ['assets/sound/chicks_peeping.mp3', 'assets/sound/chicks_peeping.wav'], true);
         this.game.load.audio('pigSnort', ['assets/sound/pigsnort.mp3', 'assets/sound/pigsnort.wav'], true);
         this.game.load.audio('tractor', ['assets/sound/tractor.mp3'], true);
+        this.game.load.audio('horn', ['assets/sound/tractor_horn.mp3'], true);
 
     },
 

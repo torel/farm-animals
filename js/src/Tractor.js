@@ -81,6 +81,7 @@ Tractor.prototype.smokeAnimation = function() {
     this.framecount = 0;
     this.animations.play('smoke');
     this.tractorHorn.play();
+    this.game.animals['pig'].playAnimation('jump');
 };
 
 Tractor.prototype.findDirection = function () {
