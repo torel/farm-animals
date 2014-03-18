@@ -45,7 +45,7 @@ PigState.prototype =  {
     },
 
     switchState: function() {
-        this.game.state.start('ChickenState');
+        this.game.state.start('SheepState');
         // this.backgroundSound.stop();
     }
 };

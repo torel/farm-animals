@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="179.66338"
+   height="82.072906"
+   id="svg9656"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="stone.svg"
+   inkscape:export-filename="/home/toreinar/Projects/farm-animals/assets/img/generic/stone.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs9658" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="72.904382"
+     inkscape:cy="27.48757"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1918"
+     inkscape:window-height="1030"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata9661">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(9.421088,-959.13109)">
+    <g
+       id="g10218"
+       transform="matrix(0.99663049,-0.08202234,0.08202234,0.99663049,-81.829448,9.9313265)">
+      <path
+         sodipodi:nodetypes="sssssss"
+         inkscape:connector-curvature="0"
+         id="path9670"
+         d="m 114.68082,962.00545 c -37.597967,-4.04742 -85.089921,-5.35628 -112.8571453,19.64284 -10.86318,9.78024 -17.6656197,32.52691 -6.071428,41.42851 9.627396,7.3916 76.4623063,18.9564 115.3571433,17.8572 16.54785,-0.4676 39.67061,-2.5946 48.57143,-10.357 10.92144,-9.5246 11.44146,-35.88633 1.78572,-47.85727 -10.46208,-12.97064 -29.92564,-18.8993 -46.78572,-20.71428 z"
+         style="fill:#d3d3d3;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccssc"
+         inkscape:connector-curvature="0"
+         id="path10185"
+         d="m 154.497,975.99823 c 1.33382,29.37637 -128.477125,55.03367 -154.49199134,49.29107 52.82267634,19.9544 144.02031134,23.489 161.46153134,3.5018 10.32932,-11.8371 13.05294,-36.70699 -0.35716,-47.49995 -6.57926,-5.29525 0.014,0.0443 -6.61238,-5.29292 z"
+         style="fill:#a2a2a2;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path10195"
+         d="m 132.34678,969.97119 c -15.08495,4.2988 -30.1699,8.07339 -45.254843,10.96016 10.584368,-6.95733 31.994063,-9.58167 45.254843,-10.96016 z"
+         style="fill:#e9e9e9;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path10197"
+         d="m 145.42824,977.21903 c -18.5717,4.64612 -41.26169,10.0123 -50.558125,16.61701 24.609815,-5.79616 43.785765,-14.74358 50.558125,-16.61701 z"
+         style="fill:#e9e9e9;fill-opacity:1;stroke:none" />
+    </g>
+  </g>
+</svg>
