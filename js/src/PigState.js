@@ -30,8 +30,10 @@ PigState.prototype =  {
         // this.backgroundSound = this.game.add.audio('chicks', 0.2, true);
         // this.backgroundSound.play();
 
-        var button = this.game.add.button(80, 300, 'button', this.switchState, this);
+        var button = this.game.add.button(80, 300, 'button', this.switchStateLeft, this);
         button.scale.x = -1;
+        var rightButton = this.game.add.button(750, 300, 'button', this.switchStateRight, this);
+
         // this.backgroundSound = this.game.add.audio('pigs', 0.2, true);
         // this.backgroundSound.play();
 
@@ -44,7 +46,12 @@ PigState.prototype =  {
         // }
     },
 
-    switchState: function() {
+    switchStateLeft: function() {
+        this.game.state.start('ChickenState');
+        // this.backgroundSound.stop();
+    },
+
+    switchStateRight: function() {
         this.game.state.start('SheepState');
         // this.backgroundSound.stop();
     }

@@ -28,11 +28,11 @@ ChickenState.prototype =  {
         this.backgroundSound = this.game.add.audio('chicks', 0.2, true);
         this.backgroundSound.play();
 
-        this.game.add.button(700, 300, 'button', this.switchState, this);
+        this.game.add.button(750, 300, 'button', this.switchStateRight, this);
 
     },
 
-    switchState: function() {
+    switchStateRight: function() {
         this.game.state.start('PigState');
         this.backgroundSound.stop();
     }
